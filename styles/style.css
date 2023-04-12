@@ -1,0 +1,146 @@
+html {
+  font-size: 100%;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+}
+
+body {
+  color: #24292e;
+  background-color: #fafafa;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  text-align: left;
+}
+
+header {
+  background-color: #efe7d5;
+  position: sticky;
+  top: 0;
+}
+header div {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  margin: 0 auto;
+}
+header div ul {
+  display: flex;
+  padding: 10px 0;
+}
+header div li {
+  margin-left: 30px;
+}
+header div li a {
+  color: #24292e;
+}
+header div li a:hover {
+  opacity: 0.7;
+}
+header div img {
+  width: 100px;
+  height: 50px;
+}
+
+main section {
+  max-width: 1000px;
+  margin: 0 auto 80px auto;
+  padding: 0 4%;
+}
+main section:first-child {
+  margin-top: 80px;
+}
+main p.link {
+  text-align: right;
+  margin: 50px 50px;
+}
+main #about {
+  text-align: center;
+}
+main #work ul, main #note ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 20px;
+}
+main #work ul li, main #note ul li {
+  max-width: 32%;
+}
+main #work ul li img, main #note ul li img {
+  width: 290px;
+  height: 290px;
+}
+main #list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #list ul li {
+  display: flex;
+  padding: 25px 0;
+  width: 100%;
+  border-bottom: 1px solid #a5a5a5;
+}
+main #list ul li img {
+  width: 290px;
+  height: 290px;
+  margin-right: 50px;
+}
+main #detail img {
+  margin: 0 auto 50px;
+  display: block;
+  width: 90%;
+  height: auto;
+}
+main #detail p {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #efe7d5;
+}
+footer div {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  margin: 0 auto;
+}
+footer div ul {
+  display: flex;
+  padding: 10px 0;
+}
+footer div li {
+  font-size: 0.9rem;
+  margin-left: 15px;
+}
+footer div li a {
+  color: #24292e;
+}
+footer div li a:hover {
+  opacity: 0.7;
+}
+footer div img {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */
