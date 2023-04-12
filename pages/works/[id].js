@@ -2,14 +2,13 @@ import { client } from '../../libs/client';
 
 export default function workId({ work }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{work.title}</h1>
-      <p className={styles.publishedAt}>{work.publishedAt}</p>
+    <main >
+      <h1>{work.title}</h1>
+      <p>{work.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
           __html: `${work.body}`,
         }}
-        className={styles.post}
       />
     </main>
   );
