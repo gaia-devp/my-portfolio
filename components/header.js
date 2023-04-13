@@ -11,6 +11,7 @@ export default function Header() {
             <li><Link href="/work">work</Link></li>
             <li><Link href="/note">note</Link></li>
             <li><Link href="/about">about</Link></li>
+            <li><Link href="/contact">contact</Link></li>
           </ul>
         </nav>
       </div>

@@ -2,15 +2,15 @@ import { client } from '../../libs/client';
 
 export default function noteId({ note }) {
   return (
-    <>
-      <h1>{note.title}</h1>
-      <p>{note.publishedAt}</p>
+    <section id="detail">
+      <h2>{note.title}</h2>
+      <img src={note.img.url} alt={note.title} />
       <div
         dangerouslySetInnerHTML={{
           __html: `${note.body}`,
         }}
       />
-    </>
+    </section>
   );
 }
 

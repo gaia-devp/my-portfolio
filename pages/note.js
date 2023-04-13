@@ -3,15 +3,17 @@ import { client } from "../libs/client";
 
 export default function Home({ note }) {
   return (
-    <div>
+    <section id="list">
+      <h2>Notes</h2>
       <ul>
         {note.map((note) => (
           <li key={note.id}>
-            <Link href={`/notes/${note.id}`}>{note.title}</Link>
+            <Link href={`/notes/${note.id}`}><img src={note.img.url} alt="" /></Link>
+            <p>{note.title}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 

@@ -3,17 +3,19 @@ import { client } from "../libs/client";
 
 export default function Home({ work }) {
   return (
-    <div>
+    <section id="list">
+      <h2>Works</h2>
       <ul>
         {work.map((work) => (
           <li key={work.id}>
-            <Link href={`/works/${work.id}`}>{work.comp}</Link>
+            <Link href={`/works/${work.id}`}><img src={work.img.url} alt={work.comp} /></Link>
+            <p>{work.comp}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
-}
+};
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {

@@ -2,15 +2,15 @@ import { client } from '../../libs/client';
 
 export default function workId({ work }) {
   return (
-    <>
-      <h1>{work.comp}</h1>
-      <p>{work.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
+    <section id="detail">
+      <h2>Work</h2>
+      <img src={work.img.url} alt={work.comp} />
+      <p>{work.comp}</p>
+      <div dangerouslySetInnerHTML={{
           __html: `${work.body}`,
-        }}
-      />
-    </>
+        }} />
+      <p>{work.skill}</p>
+    </section>
   );
 }
 
