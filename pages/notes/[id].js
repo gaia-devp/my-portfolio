@@ -1,13 +1,13 @@
 import { client } from '../../libs/client';
 
-export default function workId({ work }) {
+export default function noteId({ note }) {
   return (
     <main>
-      <h1>{work.comp}</h1>
-      <p>{work.publishedAt}</p>
+      <h1>{note.title}</h1>
+      <p>{note.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${work.body}`,
+          __html: `${note.body}`,
         }}
       />
     </main>
@@ -16,20 +16,20 @@ export default function workId({ work }) {
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "works" });
+  const data = await client.get({ endpoint: "notes" });
 
-  const paths = data.contents.map((content) => `/works/${content.id}`);
+  const paths = data.contents.map((content) => `/notes/${content.id}`);
   return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const data = await client.get({ endpoint: "works", contentId: id });
+  const data = await client.get({ endpoint: "notes", contentId: id });
 
   return {
     props: {
-      work: data,
+      note: data,
     },
   };
 };

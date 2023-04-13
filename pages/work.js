@@ -7,7 +7,7 @@ export default function Home({ work }) {
       <ul>
         {work.map((work) => (
           <li key={work.id}>
-            <Link href={`/works/${work.id}`}>{work.title}</Link>
+            <Link href={`/works/${work.id}`}>{work.comp}</Link>
           </li>
         ))}
       </ul>
@@ -18,7 +18,6 @@ export default function Home({ work }) {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "works" });
-
   return {
     props: {
       work: data.contents,
