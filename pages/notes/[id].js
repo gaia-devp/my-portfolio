@@ -2,7 +2,7 @@ import { client } from '../../libs/client';
 
 export default function noteId({ note }) {
   return (
-    <main>
+    <>
       <h1>{note.title}</h1>
       <p>{note.publishedAt}</p>
       <div
@@ -10,7 +10,7 @@ export default function noteId({ note }) {
           __html: `${note.body}`,
         }}
       />
-    </main>
+    </>
   );
 }
 

@@ -2,7 +2,7 @@ import { client } from '../../libs/client';
 
 export default function workId({ work }) {
   return (
-    <main>
+    <>
       <h1>{work.comp}</h1>
       <p>{work.publishedAt}</p>
       <div
@@ -10,7 +10,7 @@ export default function workId({ work }) {
           __html: `${work.body}`,
         }}
       />
-    </main>
+    </>
   );
 }
 
