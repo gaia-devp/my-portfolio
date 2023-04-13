@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="footer">
+    <footer>
       <div>
         <small>&copy; 2020 My Work</small>
         <ul>
