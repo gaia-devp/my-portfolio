@@ -34,8 +34,6 @@ function About() {
   );
 }
 
-
-
 function Works({ work }) {
   return (
     <section id="work">
@@ -48,6 +46,7 @@ function Works({ work }) {
           </li>
         ))}
       </ul>
+      <p class="link"><Link href="/work">もっと見る</Link></p>
     </section>
   );
 }
@@ -74,7 +73,7 @@ function Contact() {
     <section id="contact">
       <h2>Contact</h2>
       <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <p class="link"><Link href="/contact">話をしてみる</Link></p>
+      <p class="link"><Link href="/contact">もっと聞く</Link></p>
     </section>
   );
 }

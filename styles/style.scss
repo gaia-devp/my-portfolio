@@ -157,6 +157,7 @@ footer{
     height: 200px;
     margin: 0 auto;
     @include mobile {
+      height: 100px;
       justify-content: center;
       flex-direction: column-reverse;
       align-items: center;
