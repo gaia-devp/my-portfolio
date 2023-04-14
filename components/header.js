@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import Hamburger from './hamburger';
 
 export default function Header() {
   return (
     <header>
-      <div>
+      <Hamburger />
+      <div className='pc-menu'>
         <h1><Link href="/"><img src="img/300x200.png" alt="logo" /></Link></h1>
         <nav>
           <ul>

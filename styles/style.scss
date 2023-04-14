@@ -1,6 +1,17 @@
+//レスポンシブ用
+$mb: 767px;
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 html {
-  font-size: 100%;
+  font-size: 16px;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  @include mobile {
+    font-size: 12px;
+  }
 // font-family: 'Zen Kurenaido', sans-serif;
 }
 body {
@@ -27,14 +38,20 @@ header{
   background-color: #efe7d5;
   position: sticky;
   top: 0;
-  div{
+  .pc-menu{
     max-width: 960px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 90px;
     margin: 0 auto;
+    @include mobile{
+      height: 60px;
+    }
     ul{
+      @include mobile {
+        display: none;
+      }
       display: flex;
       padding: 10px 0;
     }
@@ -50,6 +67,9 @@ header{
     img{
       width: 100px;
       height: 50px;
+      @include mobile {
+        padding-left: 15px;
+      }
     }
   }
 }
@@ -79,11 +99,19 @@ main{
       margin-bottom: 50px;
       column-gap: 2%;
       row-gap: 20px;
+
       li{
-        max-width: 32%;
+        width: 32%;
+        @include mobile {
+          width: 49%;
+        }
         img{
-          width: 290px;
-          height: 290px;
+          width: 100%;
+          max-width: 290px;
+          height: auto;
+          @include mobile{
+            height: auto;
+          }
         }
         // margin-bottom: 20px;
       }
@@ -128,6 +156,11 @@ footer{
     align-items: center;
     height: 200px;
     margin: 0 auto;
+    @include mobile {
+      justify-content: center;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
     ul{
       display: flex;
       padding: 10px 0;

@@ -1,11 +1,24 @@
 import Link from 'next/link';
+import { client } from "../libs/client";
 
-export default function Top() {
+export const getStaticProps = async () => {
+  const dataWorks = await client.get({ endpoint: "works" , queries: { limit: 6 } });
+  const dataNotes = await client.get({ endpoint: "notes" , queries: { limit: 3 } });
+  // console.log(dataNotes.contents)
+  return {
+    props: {
+      workdata: dataWorks.contents,
+      notedata: dataNotes.contents,
+    },
+  };
+};
+
+export default function Top(props) {
   return (
     <>
       <About />
-      <Works />
-      <Notes />
+      <Works work={props.workdata}/>
+      <Notes note={props.notedata}/>
       <Contact />
     </>
   );
@@ -21,31 +34,35 @@ function About() {
   );
 }
 
-function Works() {
+
+
+function Works({ work }) {
   return (
     <section id="work">
       <h2>Works</h2>
       <ul>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
+        {work.map((work) => (
+          <li key={work.id}>
+            <Link href={`/works/${work.id}`}><img src={work.img.url} alt={work.comp} /></Link>
+            <p>{work.comp}</p>
+          </li>
+        ))}
       </ul>
-      <p class="link"><Link href="/work">もっと見る</Link></p>
     </section>
   );
 }
 
-function Notes() {
+function Notes({ note }) {
   return (
     <section id="note">
       <h2>Notes</h2>
       <ul>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
-        <li><img src="img/dummy.jpg" alt="テキストテキストテキスト" /><p>会社名</p></li>
+        {note.map((note) => (
+          <li key={note.id}>
+            <Link href={`/notes/${note.id}`}><img src={note.img.url} alt="" /></Link>
+            <p>{note.title}</p>
+          </li>
+        ))}
       </ul>
       <p class="link"><Link href="/note">もっと読む</Link></p>
     </section>
