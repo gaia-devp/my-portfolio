@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import Hamburger from './hamburger';
 
 export default function Header() {
   return (
     <header>
       <div className='menu'>
-        <h1><Link href="/"><img src="img/300x200.png" alt="logo" /></Link></h1>
+        <h1><Link href="/"><img src="img/logo.png" alt="logo" /></Link></h1>
         <nav>
           <ul>
             <li><Link href="/">top</Link></li>
