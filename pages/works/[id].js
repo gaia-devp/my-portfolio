@@ -1,4 +1,5 @@
 import { client } from '../../libs/client';
+import Link from "next/link";
 
 export default function workId({ work }) {
   return (
@@ -10,6 +11,7 @@ export default function workId({ work }) {
           __html: `${work.body}`,
         }} />
       <p>{work.skill}</p>
+      <p class="link"><Link href="/work">戻る</Link></p>
     </section>
   );
 }

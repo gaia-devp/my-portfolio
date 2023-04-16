@@ -7,10 +7,12 @@ export default function Home({ work }) {
       <h2>Works</h2>
       <ul>
         {work.map((work) => (
-          <li key={work.id}>
-            <Link href={`/works/${work.id}`}><img src={work.img.url} alt={work.comp} /></Link>
-            <p>{work.comp}</p>
-          </li>
+          <Link href={`/works/${work.id}`}>
+            <li key={work.id}>
+              <img src={work.img.url} alt={work.comp} />
+              <p>{work.comp}</p>
+            </li>
+          </Link>
         ))}
       </ul>
     </section>

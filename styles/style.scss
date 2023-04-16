@@ -148,23 +148,15 @@ main{
         @include mobile {
           padding: 15px 0;
         }
-        a {
-            @include mobile {
-              width: 40%;
-            }
-        }
         img{
           width: 290px;
           height: 290px;
           margin-right: 50px;
           @include mobile {
-            width: 100%;
+            width: 40%;
             height: auto;
-          }
-        }
-        p {
-          @include mobile{
-            margin-left: 15px;
+            max-height: 40%;
+            margin-right: 15px;
           }
         }
       }

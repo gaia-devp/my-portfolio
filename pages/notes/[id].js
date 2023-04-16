@@ -1,4 +1,5 @@
 import { client } from '../../libs/client';
+import Link from "next/link";
 
 export default function noteId({ note }) {
   return (
@@ -10,6 +11,7 @@ export default function noteId({ note }) {
           __html: `${note.body}`,
         }}
       />
+      <p class="link"><Link href="/note">戻る</Link></p>
     </section>
   );
 }
