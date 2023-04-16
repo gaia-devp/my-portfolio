@@ -23,6 +23,7 @@ h2{
   margin-bottom: 20px;
 }
 a {
+  color:inherit;
   text-decoration: none;
 }
 img {
@@ -38,7 +39,7 @@ header{
   background-color: #efe7d5;
   position: sticky;
   top: 0;
-  .pc-menu{
+  .menu{
     max-width: 960px;
     display: flex;
     justify-content: space-between;
@@ -49,9 +50,6 @@ header{
       height: 60px;
     }
     ul{
-      @include mobile {
-        display: none;
-      }
       display: flex;
       padding: 10px 0;
     }

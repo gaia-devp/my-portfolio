@@ -4,7 +4,7 @@ import Hamburger from './hamburger';
 export default function Header() {
   return (
     <header>
-      <div className='pc-menu'>
+      <div className='menu'>
         <h1><Link href="/"><img src="img/300x200.png" alt="logo" /></Link></h1>
         <nav>
           <ul>
