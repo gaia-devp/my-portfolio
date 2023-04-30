@@ -7,7 +7,7 @@ export default function Home({ note }) {
       <h2>Notes</h2>
       <ul>
         {note.map((note) => (
-          <Link href={`/notes/${note.id}`}>
+          <Link href={`/notes/${note.id}`} className="item">
             <li key={note.id}>
               <img src={note.img.url} alt="" />
               <p>{note.title}</p>

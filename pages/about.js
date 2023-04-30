@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section id="detail">
+    <section id="about-detail">
       <h2>About</h2>
       <img src="/img/dummy.jpg" alt="name" />
       <p class="">会社名</p>
