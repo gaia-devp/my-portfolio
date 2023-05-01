@@ -19,7 +19,7 @@ html {
   }
 }
 body {
-  color: #24292e;
+  color: #000000;
   background-color: #fafafa;
 }
 h2{
@@ -38,6 +38,9 @@ li {
 }
 p{
   text-align: left;
+  &.center{
+    text-align: center;
+  }
 }
 header{
   background-color: #efe7d5;
@@ -102,6 +105,13 @@ main{
       margin: 50px;
       @include mobile {
         margin: 10px;
+      }
+      a{
+        padding: 5px;
+        &:hover{
+          padding-right: 4px;
+          border: 1px solid #a9a9a9;
+        }
       }
     }
   }
@@ -176,6 +186,44 @@ main{
       margin-bottom: 30px;
     }
   }
+  #about-detail{
+    .introduction{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      div{
+        max-width: 50%;
+        h3{
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+          span{
+            font-size: 1rem;
+          }
+        }
+      }
+      img{
+        max-width: 30%;
+      }
+    }
+  }
+  #contact{
+    ul{
+      margin-top: 30px;
+      li{
+        margin-bottom: 15px;
+        a{
+          display: flex;
+        }
+      }
+      img{
+        width: 25px;
+        height: 25px;
+        opacity: 0.5;
+        margin-right: 10px;
+      }
+    }
+  }
 }
 
 footer{
@@ -214,8 +262,8 @@ footer{
       }
     }
     img{
-      width: 35px;
-      height: 35px;
+      width: 25px;
+      height: 25px;
       opacity: 0.5;
     }
   }

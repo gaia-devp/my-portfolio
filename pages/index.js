@@ -28,7 +28,7 @@ function About() {
   return (
     <section id="about">
       <h2>GAIA MATSUYOSHI</h2>
-      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <p class="center">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       <p class="link"><Link href="/about">もっと知る</Link></p>
     </section>
   );
@@ -72,7 +72,7 @@ function Contact() {
   return (
     <section id="contact">
       <h2>Contact</h2>
-      <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <p>　すこしでも興味を持っていただけたなら。</p>
       <p class="link"><Link href="/contact">もっと聞く</Link></p>
     </section>
   );
