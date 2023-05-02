@@ -15,6 +15,7 @@ export default function Home({ note }) {
           </Link>
         ))}
       </ul>
+      <p class="link"><Link className="line" href="/">戻る</Link></p>
     </section>
   );
 }
