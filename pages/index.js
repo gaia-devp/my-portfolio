@@ -28,7 +28,7 @@ function About() {
   return (
     <section id="about">
       <h2>GAIA MATSUYOSHI</h2>
-      <p class="center">宮崎のとあるSaaS企業でフロントエンドエンジニアやってます。</p>
+      <p class="center">宮崎のとあるSaaS企業のフロントエンドエンジニア</p>
       <p class="link"><Link className="line" href="/about">もっと知る</Link></p>
     </section>
   );
