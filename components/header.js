@@ -7,11 +7,11 @@ export default function Header() {
         <h1><Link href="/"><img src="img/logo.png" alt="logo" /></Link></h1>
         <nav>
           <ul>
-            <li><Link href="/">top</Link></li>
-            <li><Link href="/work">work</Link></li>
-            <li><Link href="/note">note</Link></li>
-            <li><Link href="/about">about</Link></li>
-            <li><Link href="/contact">contact</Link></li>
+            <li><Link className="line" href="/">top</Link></li>
+            <li><Link className="line" href="/work">work</Link></li>
+            <li><Link className="line" href="/note">note</Link></li>
+            <li><Link className="line" href="/about">about</Link></li>
+            <li><Link className="line" href="/contact">contact</Link></li>
           </ul>
         </nav>
       </div>

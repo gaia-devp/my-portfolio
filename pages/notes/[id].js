@@ -11,7 +11,7 @@ export default function noteId({ note }) {
           __html: `${note.body}`,
         }}
       />
-      <p class="link"><Link href="/note">戻る</Link></p>
+      <p class="link"><Link className="line" href="/note">戻る</Link></p>
     </section>
   );
 }

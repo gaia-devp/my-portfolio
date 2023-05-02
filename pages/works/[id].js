@@ -11,7 +11,7 @@ export default function workId({ work }) {
           __html: `${work.body}`,
         }} />
       <p>{work.skill}</p>
-      <p class="link"><Link href="/work">戻る</Link></p>
+      <p class="link"><Link className="line" href="/work">戻る</Link></p>
     </section>
   );
 }

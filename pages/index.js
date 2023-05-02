@@ -28,8 +28,8 @@ function About() {
   return (
     <section id="about">
       <h2>GAIA MATSUYOSHI</h2>
-      <p class="center">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <p class="link"><Link href="/about">もっと知る</Link></p>
+      <p class="center">宮崎のとあるSaaS企業でフロントエンドエンジニアやってます。</p>
+      <p class="link"><Link className="line" href="/about">もっと知る</Link></p>
     </section>
   );
 }
@@ -46,7 +46,7 @@ function Works({ work }) {
           </li>
         ))}
       </ul>
-      <p class="link"><Link href="/work">もっと見る</Link></p>
+      <p class="link"><Link className="line" href="/work">もっと見る</Link></p>
     </section>
   );
 }
@@ -63,7 +63,7 @@ function Notes({ note }) {
           </li>
         ))}
       </ul>
-      <p class="link"><Link href="/note">もっと読む</Link></p>
+      <p class="link"><Link className="line" href="/note">もっと読む</Link></p>
     </section>
   );
 }
@@ -73,7 +73,7 @@ function Contact() {
     <section id="contact">
       <h2>Contact</h2>
       <p>　すこしでも興味を持っていただけたなら。</p>
-      <p class="link"><Link href="/contact">もっと聞く</Link></p>
+      <p class="link"><Link className="line" href="/contact">もっと聞く</Link></p>
     </section>
   );
 }
