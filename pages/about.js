@@ -15,7 +15,7 @@ export default function About() {
           <p class="">宮崎に帰郷するとともに<br className="sp_only"></br>現SaaS企業に就職</p>
           <p class="">現在は自社システムを用いて<br className="sp_only"></br>WEBサイトを制作しています</p>
         </div>
-        <img src="/img/dummy.jpg" alt="name" />
+        <img src="/img/about.jpg" alt="name" />
       </div>
       <div id="contact">
         <Sns></Sns>
