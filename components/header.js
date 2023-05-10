@@ -5,7 +5,7 @@ export default function Header() {
     <header>
       <div className='menu'>
         <h1><Link href="/"><img src="img/logo.png" alt="logo" /></Link></h1>
-        <nav>
+        <nav className='pc_only'>
           <ul>
             <li><Link className="line" href="/">top</Link></li>
             <li><Link className="line" href="/work">work</Link></li>
