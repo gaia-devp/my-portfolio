@@ -195,8 +195,12 @@ main{
     img{
       margin: 0 auto 25px;
       display: block;
-      width: 60%;
-      height: auto;
+      width: auto;
+      max-width: 80%;
+      max-height: 500px;
+      @include mobile{
+        max-height: 250px;
+      }
     }
     p{
       margin-bottom: 20px;

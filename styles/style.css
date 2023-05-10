@@ -211,8 +211,14 @@ main #list ul li img {
 main #detail img {
   margin: 0 auto 25px;
   display: block;
-  width: 60%;
-  height: auto;
+  width: auto;
+  max-width: 80%;
+  max-height: 500px;
+}
+@media screen and (max-width: 767px) {
+  main #detail img {
+    max-height: 250px;
+  }
 }
 main #detail p {
   margin-bottom: 20px;
