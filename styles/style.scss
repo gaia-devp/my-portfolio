@@ -292,9 +292,6 @@ footer{
   width: 100%;
   position: absolute;/*←絶対位置*/
   bottom: 0; /*下に固定*/
-  @include mobile{
-    bottom: 50px;
-  }
   div{
     max-width: 1000px;
     display: flex;
@@ -303,10 +300,11 @@ footer{
     height: 150px;
     margin: 0 auto;
     @include mobile {
-      height: 80px;
+      height: 130px;
       justify-content: center;
       flex-direction: column-reverse;
       align-items: center;
+      padding-bottom: 50px;
     }
     ul{
       display: flex;

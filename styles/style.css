@@ -305,11 +305,6 @@ footer {
   position: absolute; /*←絶対位置*/
   bottom: 0; /*下に固定*/
 }
-@media screen and (max-width: 767px) {
-  footer {
-    bottom: 50px;
-  }
-}
 footer div {
   max-width: 1000px;
   display: flex;
@@ -320,10 +315,11 @@ footer div {
 }
 @media screen and (max-width: 767px) {
   footer div {
-    height: 80px;
+    height: 130px;
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
+    padding-bottom: 50px;
   }
 }
 footer div ul {
