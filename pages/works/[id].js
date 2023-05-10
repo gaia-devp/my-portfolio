@@ -6,11 +6,11 @@ export default function workId({ work }) {
     <section id="detail">
       <h2>Work</h2>
       <img src={work.img.url} alt={work.comp} />
-      <p>{work.comp}</p>
+      <p><strong>{work.comp}</strong></p>
+      <p>{work.skill}</p>
       <div dangerouslySetInnerHTML={{
           __html: `${work.body}`,
         }} />
-      <p>{work.skill}</p>
       <p class="link"><Link className="line" href="/work">戻る</Link></p>
     </section>
   );

@@ -9,7 +9,7 @@ export default function Home({ work }) {
         {work.map((work) => (
           <Link href={`/works/${work.id}`} className="item">
             <li key={work.id}>
-              <img src={work.img.url} alt={work.comp} />
+              <img src={work.thumb.url} alt={work.comp} />
               <p>{work.comp}</p>
             </li>
           </Link>

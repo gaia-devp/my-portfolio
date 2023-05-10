@@ -41,7 +41,7 @@ function Works({ work }) {
       <ul>
         {work.map((work) => (
           <li key={work.id}>
-            <Link href={`/works/${work.id}`}><img src={work.img.url} alt={work.comp} /></Link>
+            <Link href={`/works/${work.id}`}><img src={work.thumb.url} alt={work.comp} /></Link>
             <p>{work.comp}</p>
           </li>
         ))}
@@ -58,7 +58,7 @@ function Notes({ note }) {
       <ul>
         {note.map((note) => (
           <li key={note.id}>
-            <Link href={`/notes/${note.id}`}><img src={note.img.url} alt="" /></Link>
+            <Link href={`/notes/${note.id}`}><img src={note.thumb.url} alt="" /></Link>
             <p>{note.title}</p>
           </li>
         ))}
