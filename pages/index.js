@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { client } from "../libs/client";
 
 export const getStaticProps = async () => {
-  const dataWorks = await client.get({ endpoint: "works" , queries: { limit: 6 } });
+  const dataWorks = await client.get({ endpoint: "works" , queries: { limit: 6 ,filters: 'view[equals]true'} });
   const dataNotes = await client.get({ endpoint: "notes" , queries: { limit: 3 } });
   // console.log(dataNotes.contents)
   return {
