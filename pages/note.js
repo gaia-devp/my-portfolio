@@ -10,7 +10,7 @@ export default function Home({ note }) {
           <Link href={`/notes/${note.id}`} className="item">
             <li key={note.id}>
               <img src={note.thumb.url} alt="" />
-              <p>{note.title}</p>
+              <p className="bold">{note.title}</p>
             </li>
           </Link>
         ))}

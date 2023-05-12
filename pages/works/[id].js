@@ -6,7 +6,7 @@ export default function workId({ work }) {
     <section id="detail">
       <h2>Work</h2>
       <img src={work.img.url} alt={work.comp} />
-      <p><a href={work.link}><strong>{work.comp}</strong></a></p>
+      <p><a href={work.link} target="_blank" rel="noopener noreferrer"><strong>{work.comp}</strong></a></p>
       <p>{work.skill}</p>
       <div dangerouslySetInnerHTML={{
           __html: `${work.body}`,

@@ -10,7 +10,7 @@ export default function Home({ work }) {
           <Link href={`/works/${work.id}`} className="item">
             <li key={work.id}>
               <img src={work.thumb.url} alt={work.comp} />
-              <p>{work.comp}</p>
+              <p className="bold">{work.comp}</p>
             </li>
           </Link>
         ))}
